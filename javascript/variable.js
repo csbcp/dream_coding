@@ -10,7 +10,7 @@
 
 'use strict';
 
-// 2. Variable (변수)
+// 2. Variable (변수), rw(read/write)
 // let (added in ES6)
 
 let globalName = 'global name';
@@ -33,19 +33,25 @@ console.log(globalName);
 // 변수를 어디에 선언했는지와 상관없이 항상 제일위로 선언으로 끌어올려준다.
 // 그리고 block를 무시한다. has no block scope
 
-// 3.contants
-// 값을 할당하면 절대 값이 바뀌지 않는 것
+// 3.contant, r(read only)
+// use const whenever possible.
+// only use let it variable nees to change.
+
+const daysInWeek = 7;
+const maxNumber = 5;
+
+// Note!
+// Immutable data types: premitive types , frozen object (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable is JS
 // favor immutable data type always for a few reasons:
 //  -- security
 //  -- thread safety
 //  -- reduce human mistakes
 // Mutable Type : let, Immutable Type : const
-const daysInWeek = 7;
-const maxNumber = 5;
 
 // 4. variable type
-// primitive, single item: number, string, boolean, null, undefined, symbol
-// object, box container
+// primitive(값 자체가 메모리에 저장), single item: number, string, boolean, null, undefined, symbol
+// object(object를 가르키는 reference를 가리킨다), box container
 // function, first-class function
 const count = 17;   // integer
 const size = 17.1;  // decimal number
