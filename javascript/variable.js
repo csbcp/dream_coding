@@ -122,4 +122,4 @@ console.log(`value: ${text}, type:${typeof text}`);
 
 // console.log(text.charAt(0));    // runtime시에 type이 정해지므로 Uncaught TypeError
 
-// 자바스크립트 기초 강의 (ES5+): 같이 노트를 작성하며 배워요 📒[https://youtu.be/OCCpGh4ujb8]
+// 드림코딩 by 엘리 : 자바스크립트 3. 데이터타입, data types, let vs var, hoisting | 프론트엔드 개발자 입문편 (JavaScript ES5+) [https://youtu.be/OCCpGh4ujb8]
