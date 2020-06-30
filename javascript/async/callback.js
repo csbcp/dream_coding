@@ -68,11 +68,13 @@ userStorage.loginUser(
                 alert(
                     `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
                 );
-            }, (error) => {
+            }, 
+            (error) => {
                 console.log(error);
             }
         );
-    }, (error) => {
+    }, 
+    (error) => {
         console.log(error);
     }
 );
