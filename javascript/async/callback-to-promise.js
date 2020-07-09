@@ -43,4 +43,33 @@ async function asyncAwait(){
     return alert(`Hello ${user.name}, you have a ${user.role} role.`);
 }
     
-asyncAwait()
+asyncAwait();
+
+class UserStorage {
+    async getUserWithRole(user, password) {
+        const user = await this.loginUser(user, password);
+        const role = await this.getRoles(user);
+        return role;
+    }
+}
+
+UserStorage
+.getUserWithRole(user, password)
+.catch(console.log)
+.then(console.log);
+
+class UserStorage {
+    // 이거 추가함
+    async getUserWithRole(user, password) {
+        const user = await this.loginUser(user, password);
+        const role = await this.getRoles(user);
+        return role;
+    }
+}
+
+// 그리고 쓸때는
+// promise chaining -> ✨ async/await ✨
+userStorage
+.getUserWithRole() //
+.catch(console.log)
+.then(console.log);
